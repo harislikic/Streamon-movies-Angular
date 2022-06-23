@@ -1,0 +1,28 @@
+
+
+
+<button (click)="filterSelection()" class="dropbtn">Comedy</button>
+
+<div class="container">
+
+  <div  *ngFor="let x of Movies" class="movie">
+
+    <a  href="movie/{{x.title}}"> <img   src="{{x.moviePicture}}" class="poster"/> </a>
+
+    <div class="movie-details">
+      <div class="box">
+        <h4 class="title">{{x.title}}</h4>
+        <p class="rating"> {{x.rating}}</p>
+      </div>
+
+      <div class="overview">
+        <h5 >{{x.about}}</h5>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>

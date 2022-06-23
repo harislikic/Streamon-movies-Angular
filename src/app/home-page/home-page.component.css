@@ -1,56 +1,50 @@
 *{
   padding: 0;
   margin: 0;
-  font-family: 'Franklin Gothic Book','Arial', Arial, sans-serif;
+  font-family:  'Montserrat', Arial, sans-serif;
   box-sizing: border-box;
 
 }
 
 :root{
- --color-1:#EDF5E1;
+  --color-1:#EDF5E1;
   --color-2:#8EE4AF;
 }
 body,html
 {
- background-color: #EDF5E1;
+  background-color: #EDF5E1;
+  width: 100%;
+  height: 100%;
 
 }
 .header {
-  background-color: #ffffff;
+  background-color: #8EE4AF;
   width: 100%;
-  height: 80px;
+  height: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 0px;  /* ovime odmicemo | pravimo prostor */
-  border-bottom: 1px #000000 inset;
+  margin-bottom: 30px;  /* ovime odmicemo | pravimo prostor */
 }
 nav ul{
- display: flex;
+  display: flex;
 }
 nav ul li {
   list-style: none;
   margin-right: 1rem;
+
 }
 nav ul li a {
   text-decoration: none;
-  color: #000000;
-  font-size: 1.1rem;
-  font-weight: bold;
-  padding: 0.2rem 0.6rem;
-  position: relative;
-}
-li a {
-  text-decoration: none;
-  color: #000000;
-  font-size: 1.1rem;
+  color: white;
+  font-size: 1.2rem;
   font-weight: bold;
   padding: 0.2rem 0.6rem;
   position: relative;
 }
 li :hover {
-  background-color: #30B587;
-  border-radius: 1rem 1rem 1rem 1rem;
+  background-color: #039d88;
+  border-radius: 2rem 2rem 2rem 2rem;
 }
 .search-btn{
   display: flex;
@@ -67,11 +61,11 @@ li :hover {
   box-shadow: inset 0 5px 10px gray;
 }
 .search-btn button{
-  background-color: #fafafa;
-  box-shadow: inset 0 5px 10px rgba(128, 128, 128, 0.91);
+  background-color: #0eeac9;
+  box-shadow: inset 0 5px 10px gray;
   padding: 0.2rem 1rem;
   border-radius: 0 2rem 2rem 0;
-  color: #000000;
+  color: white;
   font-size: 1rem;
 }
 .container{
@@ -80,6 +74,7 @@ li :hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
 }
 .movie
 {
@@ -91,8 +86,12 @@ li :hover {
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
-  flex-wrap: wrap;
-  display: flex;
+
+}
+.container :hover{
+
+  box-shadow: 0px 0px 30px -25px rgba(0,0,0, 0.5);
+  transition: all 0.9s;
 }
 .poster{
   width: 100%;
@@ -103,7 +102,6 @@ li :hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 .movie-details .box{
   width: 100%;
@@ -113,10 +111,24 @@ li :hover {
   justify-content: space-around;
 }
 .moive-details .title{
-  width: 160px;
+  width: 150px;
   text-align: center;
-
 }
+.btn-details
+{
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding:5px;
+  font-weight: bold;
+  color: black;
+}
+a:hover{
+  background-color: #cecece;
+  transition: 0.5s;
+}
+
 .movie-details .overview{
   position: absolute;
   left: 0;
@@ -133,7 +145,7 @@ li :hover {
   width: 100%;
 }
 .movie-details:hover .overview{
- transform: translateY(0%);
+  transform: translateY(0%);
 }
 .rating{
   background-color: whitesmoke;
@@ -150,48 +162,30 @@ li :hover {
   right: 5px;
   bottom: 5px;
 }
-
-.logo a{
-  font-family: Proxima Nova Rg;
-  text-align: left;
-  font-weight: bold;
-  font-size: 2rem;
-  text-decoration: none;
-  color: #00695c;
+h4{
+  width: 150px;
+  text-align: center;
 }
-
-
 
 @media (max-width: 400px)
 {
-   .header{
-      height:auto;
-     width: 100%;
-     display: flex;
-     flex-direction: column;
-   }
-   nav ul{
-      display: flex;
-     flex-direction: column;
+  .header{
+    height:180px;
+  }
+  nav ul{
+    display: flex;
+    flex-direction: column;
 
-   }
-   nav ul li{
-      padding-top: 10px;
-     display: flex;
-     flex-direction: column;
-     border-bottom: 1px solid black;
-   }
-   .search-btn{
-      width: 100px;
-       height: auto;
-     justify-content: center;
-   }
-   .inputText{
-     width: 50px;
-     height: auto;
-     display: flex;
-     flex-direction: column;
-   }
+  }
+  nav ul li{
+    padding-top: 10px;
+  }
+  .search-btn{
+    width: 200px;
+    margin-right: 100px;
+  }
 }
+
+
 
 
